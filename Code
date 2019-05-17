@@ -1,0 +1,171 @@
+import java.util.ArrayList;
+import java.util.Random;
+public class Randomizer {
+	static ArrayList<String> Adjectives;
+	static ArrayList<String> romanticPosition; 
+	static ArrayList<String> identifiers; 
+	static ArrayList<String> verbList;
+	static ArrayList<String> nounCList;
+	static ArrayList<String> Zodiacs;
+	static ArrayList<String> Loc;
+	private static Random randomGenerator;
+	
+	
+	
+	
+public static int rdmRange(int min, int max) {
+	int x = (int)(Math.random()*((max-min)+1))+min;
+    return x;
+	
+}
+
+public static int agePicker() {
+	int rdm = (int) ((Math.random()*(50-18)+1))+18;
+	return rdm;
+}
+
+
+public static void main(String[] args) {
+	Adjectives = new ArrayList<String>();
+	Adjectives.add("horny");
+	Adjectives.add("bratty ");
+	Adjectives.add("intellectual");
+	Adjectives.add("loving");
+	Adjectives.add("tender");
+	Adjectives.add("bookish ");
+	Adjectives.add("adventurous ");
+	Adjectives.add("brave");
+	Adjectives.add("calm ");
+	Adjectives.add("ambitious");
+	Adjectives.add("brown-eyed ");
+	Adjectives.add("green-eyed");
+	Adjectives.add("blue-eyed ");
+	Adjectives.add("witty");
+	Adjectives.add("toppy ");
+	Adjectives.add("sporty ");
+	Adjectives.add("flamboyant ");
+	Adjectives.add("plant-loving");
+	Adjectives.add("animal-loving");
+	Adjectives.add("cat-loving");
+	Adjectives.add("dog-loving ");
+	Adjectives.add("scraggly ");
+	Adjectives.add("melancholy");
+	
+	// add romantic position
+	romanticPosition = new ArrayList<String>();
+	romanticPosition.add("monogamous");
+	romanticPosition.add("polyamorous");
+	romanticPosition.add("mono ");
+	romanticPosition.add("poly");
+	romanticPosition.add("relationship anarchist ");
+	romanticPosition.add("nonmonogamous");
+	romanticPosition.add("switchy");
+	romanticPosition.add("toppy ");
+	romanticPosition.add("bottom");
+	romanticPosition.add("bratty");
+	romanticPosition.add("hot");
+	
+	//identifiers list
+	identifiers = new ArrayList<String>();
+	identifiers.add("butch ");
+	identifiers.add("Dyke ");
+	identifiers.add("switch");
+	identifiers.add("bisexual ");
+	identifiers.add("femme");
+	identifiers.add("stud");
+	identifiers.add("lesbian ");
+	identifiers.add("nonbinary");
+	identifiers.add("queer");
+	identifiers.add("gnc");
+	identifiers.add("gender nonconforming");
+	identifiers.add("enby ");
+	identifiers.add("nb");
+	identifiers.add("boi");
+	identifiers.add("trans");
+	
+	//verb list
+	verbList = new ArrayList<String>();
+	verbList.add(" get drinks and have general fun");
+	verbList.add("have a home-cooked meal");
+	verbList.add("fall asleep together");
+	verbList.add("have a picnic");
+	verbList.add("talk about astrology");
+	verbList.add("create a commune ");
+	verbList.add("go to the bookstore ");
+	verbList.add("go to the botanical garden ");
+	verbList.add("go to a protest ");
+	verbList.add("find community ");
+	verbList.add("cuddle");
+	verbList.add("go biking ");
+	verbList.add("ride motorcycles");
+	verbList.add("become dog parents");
+	verbList.add("go to cubbyhole");
+	verbList.add("build a sustainable farm");
+	verbList.add("play softball");
+	
+	//Adding to noun list
+	nounCList = new ArrayList<String>();
+	nounCList.add("Hiker");
+	nounCList.add("Artist");
+	nounCList.add("Doctor");
+	nounCList.add("Musician");
+	nounCList.add("Farmer");
+	nounCList.add("Writer ");
+	nounCList.add("Poet ");
+	nounCList.add("Lawyer ");
+	nounCList.add("Athlete ");
+	nounCList.add("Skater ");
+	nounCList.add("Activist");
+	nounCList.add("Professional Softball Player");
+	nounCList.add("Rugby Player");
+	nounCList.add("Cheerleader");
+	nounCList.add("Plumber");
+	nounCList.add("Pro-Domme");
+	
+	Loc = new ArrayList<String>();
+	Loc.add("brooklyn");
+	Loc.add("have love, will travel ");
+	Loc.add("upper west side ");
+	Loc.add("portland, oregon");
+	Loc.add("northampton, ma ");
+	Loc.add("london, uk ");
+	Loc.add("denver, co ");
+	Loc.add("soCal");
+	Loc.add("San Francisco ");
+	Loc.add("ottawa, canada ");
+	Loc.add("boston, ma ");
+	Loc.add("springfield, missouri ");
+	Loc.add("kansas city, missouri ");
+	Loc.add("boulder, co");
+	Loc.add("new orleans, la ");
+	Loc.add("houston, tx ");
+	Loc.add("nice, france ");
+	Loc.add("utrecht, netherlands ");
+	Loc.add("chicago, il");
+	
+	
+	// Add to zodiac list
+	Zodiacs = new ArrayList<String>();
+	Zodiacs.add("Taurus");
+	Zodiacs.add("Virgo");
+	Zodiacs.add("Leo");
+	Zodiacs.add("Gemini");
+	Zodiacs.add("Cancer");
+	Zodiacs.add("Pisces ");
+	Zodiacs.add("Libra");
+	Zodiacs.add("Scorpio");
+	Zodiacs.add("Sagittarius");
+	Zodiacs.add("Capricorn");
+	Zodiacs.add("Aquarius ");
+	Zodiacs.add("Aries");
+
+//PERSONALS STRUCTURE 1: Zodiac based
+System.out.println("PERSONALS: "+ agePicker()+ " Y/O" +" "+ Adjectives.get(rdmRange(0,Adjectives.size()-1) ) +" "+identifiers.get(rdmRange(0,identifiers.size()-1)) +" "+nounCList.get(rdmRange(0,nounCList.size()-1))
++ " seeking: " + Adjectives.get(rdmRange(0,Adjectives.size()-1) )+" "+ identifiers.get(rdmRange(0,identifiers.size()-1))+ " to " + verbList.get(rdmRange(0,verbList.size()-1)) + " with. " );
+//PERSONALS STRUCTURE 2
+System.out.println("PERSONALS ISO: " + agePicker()+ " Y/O" +" "+ Zodiacs.get(rdmRange(0,Zodiacs.size()-1)) +" "+ identifiers.get(rdmRange(0,identifiers.size()-1)) +" in search of: "+ Adjectives.get(rdmRange(0,Adjectives.size()-1))+ " "+ 
+romanticPosition.get(rdmRange(0,romanticPosition.size()-1) ) +" "+ identifiers.get(rdmRange(0,identifiers.size()-1))+ " who is open to " + verbList.get(rdmRange(0,verbList.size()-1)) + ", " + verbList.get(rdmRange(0,verbList.size()-1))+ ", and most importantly " + verbList.get(rdmRange(0,verbList.size()-1))+ " with. "
++ " Located: " + Loc.get(rdmRange(0,Loc.size()-1)));
+//PERSONALS STRUCTURE 3
+}
+}
